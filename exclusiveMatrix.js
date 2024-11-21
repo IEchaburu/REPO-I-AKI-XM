@@ -75,3 +75,20 @@ let checkboxes = document.querySelectorAll('input[type="checkbox"]');
     let option7 = checkboxes[25];
     let option8 = checkboxes[29];
 
+    // MISMO QUE ARRIBA PERO INVIRTIENDO COLUMNAS Y FILAS
+
+    let rows = document.querySelectorAll('tr.ChoiceRow');
+
+    let row1 = Array.from(rows[0].children).slice(1);
+    let row2 = Array.from(rows[1].children).slice(1);
+
+    for(let i = 0; i < row1.length - 1; i++) {
+        row1[i].querySelector('input').addEventListener('click', () => {
+            row2[i].querySelector('input').checked = false;
+        });
+
+        row2[i].querySelector('input').addEventListener('click', () => {
+            row1[i].querySelector('input').checked = false;
+        });
+    }
+
