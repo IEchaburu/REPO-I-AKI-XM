@@ -2,7 +2,7 @@ const fs = require('fs');
 const XLSX = require('xlsx');
 
 // Cargar el archivo .xlsx
-const workbook = XLSX.readFile('Panelistas Recontacto Ola 1.xlsx');
+const workbook = XLSX.readFile('Panelistas Recontacto Ola 1 Rec 2.xlsx');
 
 // Seleccionar la primera hoja del archivo
 const sheetName = workbook.SheetNames[0]; // Nombre de la primera hoja
